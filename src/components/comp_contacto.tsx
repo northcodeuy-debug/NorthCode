@@ -1,10 +1,12 @@
 //components/comp_contacto.tsx
 
+import React from 'react';
+import { Menu } from 'lucide-react';
 
 // Props para el componente ContactSelect
 interface ContactSelectPaper {
   whatsappUrl: string;
-}
+}v
 
 const ContactSection: React.FC<ContactSelectPaper> = ({ whatsappUrl }) => {
   const [contactoRef, contactoInView] = useFadeInOnScroll();

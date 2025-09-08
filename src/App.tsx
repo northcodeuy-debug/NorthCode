@@ -620,7 +620,11 @@ const Footer = () => (
 
 const App = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen);
+  
+  //ChatGPT-- Esto no se lo ase. supongo que 
+  const toggleMobileMenu = () => setIsMobileMenuOpen(!isMobileMenuOpen); 
+
+
   const whatsappUrl = `https://wa.me/59898559058?text=${encodeURIComponent('Hola, me gustaría más información sobre los servicios de NorthCode.')}`;
 
   return (

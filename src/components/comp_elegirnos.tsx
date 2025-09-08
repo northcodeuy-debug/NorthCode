@@ -1,5 +1,12 @@
 // .components/comp_elegirnos.tsx
 
+import React from 'react';
+import { Menu } from 'lucide-react';
+
+
+
+// .components/comp_elegirnos.tsx
+
 // --- Componente Porque elegirnos ---
 
 const WhyChooseUsSection: React.FC = () => {

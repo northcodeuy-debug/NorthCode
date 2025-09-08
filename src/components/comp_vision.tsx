@@ -1,5 +1,6 @@
 //.components/comp_vision.tsx
-
+import React from 'react';
+import { Menu } from 'lucide-react';
 
 
 // --- Sección Visión ---

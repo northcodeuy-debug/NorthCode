@@ -1,5 +1,8 @@
 //components/comp_Proyecto.tsx
+
 import React from 'react';
+import { Menu } from 'lucide-react';
+
 import { useFadeInOnScroll } from '../hooks/useFadeInOnScroll';
 
 // ---- Sección Proyectos ----
@@ -28,7 +31,7 @@ interface ProjectsSectionProps {
 // ---- Componente ProjectsSection (Proyectos)  ------------
 const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
   const [proyectosRef, proyectosInView] = useFadeInOnScroll(); // Referencia y estado de visibilidad para la sección "Proyectos"
-  // Se duplica el array de proyectos para crear un efecto de carrusel infinito.
+  // Se duplica el array de e 4 para crear un efecto de carrusel infinito.
   const allProjects = [...projects, ...projects];
 
   return (
@@ -53,7 +56,18 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
         {/* Contenedor del carrusel con overflow oculto para que solo se vea la banda */}
         <div className="relative w-full overflow-hidden py-4">
           {/* La banda de proyectos que se mueve. Se duplican los elementos para el loop infinito. */}
+          
+          
+          {/* Creo que es lo de las tarjetas */
+          }
           <div className="flex animate-carousel">
+
+
+
+
+            {/* ChatGPT-- Aca es donde quiero llmar a comp_proyecto-tarje para cargar la tajeta es para poder cmabir el estilo de la tarjeta y qeu el codigo sea mas escalable  */}
+
+
             {allProjects.map((project, index) => (
               <a
                 key={index}
@@ -71,6 +85,16 @@ const ProjectsSection: React.FC<ProjectsSectionProps> = ({ projects }) => {
                 </div>
               </a>
             ))}
+
+
+
+
+
+
+
+
+
+            
           </div>
         </div>
       </div>
