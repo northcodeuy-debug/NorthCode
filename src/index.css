@@ -1,3 +1,22 @@
+/* src/index.css */
+/* Tipografías (opcional, si querés Poppins e Inter) */
+
+/* ChatGPT no se si va  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Inter:wght@400;600&display=swap');
+
+/* Variables globales */
+:root {
+  --color-primary: #686868;
+  --color-secondary: #262626;
+  /* --color-text-primary: #ef0000; */
+  --color-text-primary: #ffffff; 
+  --color-text-secondary: #686868;
+
+  --font-brand: 'Poppins', sans-serif;
+  --font-body: 'Inter', sans-serif;
+}
+
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
