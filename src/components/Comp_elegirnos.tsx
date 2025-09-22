@@ -1,18 +1,20 @@
-// .components/comp_elegirnos.tsx
+  // .components/Comp_elegirnos.tsx
 
 import React from 'react';
-import { Menu } from 'lucide-react';
-
-
-
-// .components/comp_elegirnos.tsx
+import useFadeInOnScroll from '../hooks/useFadeInOnScroll.tsx';
 
 // --- Componente Porque elegirnos ---
 
-const WhyChooseUsSection: React.FC = () => {
-  return (
+const CompElegirnos: React.FC = () => {
+  //ChatGPT ha que ver donde declaramos la variable 
+  const [elementoRef, elementoEnVista] = useFadeInOnScroll();
+
+  return (    
+
     <section id="why-choose-us" className="py-20 px-4 bg-gray-900 text-white">
-      <div className="container mx-auto">
+      
+      {/* ChatGPT aca tengo algo mal y no me doy cuenta.  */}
+      <div ref={elementoRef} className= {`container mx-autotransform transform ${elementoEnVista ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <h2 className="text-4xl font-bold mb-12 text-center text-gray-100">
           ¿Por qué elegir NorthCode?
         </h2>
@@ -70,3 +72,6 @@ const WhyChooseUsSection: React.FC = () => {
     </section>
   );
 };
+
+// 👇 Exportación default
+export default CompElegirnos;
