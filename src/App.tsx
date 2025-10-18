@@ -200,6 +200,8 @@ interface TeamSectionProps {
   teamMembers: TeamMember[]; // <- ¡Este es el cambio clave!
 };
 
+
+
 // Componente para la sección del equipo 
 // ChatGPt -- Esto hay que separarlo en las tarjeta y la seccion contenedora de las mismas 
 
