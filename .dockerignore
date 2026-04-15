@@ -1,0 +1,10 @@
+# .dockerignore
+node_modules
+dist
+.vscode
+.git
+Dockerfile
+.dockerignore
+.idea
+README.md
+
