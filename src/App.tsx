@@ -6,6 +6,8 @@ import { Menu, Linkedin, Phone, Github, Mail } from 'lucide-react';
 
 
 
+
+
 // --- Importación de imágenes ---
 
 import heroBackground from './assets/backgrounds/hero-background.jpg'
