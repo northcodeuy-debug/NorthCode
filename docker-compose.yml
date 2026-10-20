@@ -1,0 +1,28 @@
+# =============================================================================
+# DESPLIEGUE CONTENEDORIZADO: NORTHCODE WEB CORPORATIVA
+# =============================================================================
+# Archivo: docker-compose.yml
+# 
+# Orquesta el despliegue del portal institucional de NorthCode bajo la red
+# compartida 'northcode-net', permitiendo que Nginx Proxy Manager (NPM) lo
+# enrute hacia el dominio público con certificado SSL (Let's Encrypt).
+# =============================================================================
+
+networks:
+  # Red externa compartida donde ya corren NPM, Cloudflare y las bases de datos
+  northcode-net:
+    external: true
+
+services:
+  northcode-web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: northcode-corporate-web:latest
+    container_name: northcode-corporate-web
+    restart: unless-stopped
+    ports:
+      # Puerto 8080 en el host para pruebas locales (http://localhost:8080)
+      - "8080:80"
+    networks:
+      - northcode-net

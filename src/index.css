@@ -1,3 +1,64 @@
+/**
+ * @fileoverview Hoja de Estilos Globales y Directivas de Tailwind CSS (index.css)
+ * 
+ * Inyecta el motor de utilidades de Tailwind CSS (v3) y define el reseteo
+ * de scroll suave y comportamiento base del documento para NorthCode.
+ * 
+ * @module styles/index
+ */
+
+/* =============================================================================
+   1. DIRECTIVAS FUNDAMENTALES DE TAILWIND CSS
+   ============================================================================= */
+
+/* Reseteo estándar de estilos del navegador (Preflight) */
 @tailwind base;
+
+/* Clases de componentes reutilizables */
 @tailwind components;
+
+/* Clases utilitarias generadas bajo demanda (w-full, flex, bg-black, etc.) */
 @tailwind utilities;
+
+/* =============================================================================
+   2. REGLAS BASE GLOBALES DEL DOCUMENTO
+   ============================================================================= */
+
+@layer base {
+  html {
+    /* Desplazamiento animado suave para los enlaces del menú (#inicio, #proyectos) */
+    scroll-behavior: smooth;
+    color-scheme: dark;
+  }
+
+  body {
+    /* Fondo negro base y tipografía nítida */
+    @apply bg-black text-white antialiased;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+  }
+
+  /* Asegura que el contenedor de React (#root) ocupe toda la pantalla sin restricciones */
+  #root {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* =============================================================================
+   3. UTILIDADES ADICIONALES (Ocultar Scrollbar en Carrusel)
+   ============================================================================= */
+
+@layer utilities {
+  /* Oculta la barra de scroll visual manteniendo el arrastre táctil y con mouse */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}

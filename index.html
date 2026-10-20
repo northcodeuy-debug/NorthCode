@@ -1,13 +1,43 @@
 <!doctype html>
-<html lang="en">
+<!-- src/index.html -->
+
+
+<!-- ===========================================================================
+     PUNTO DE ENTRADA HTML PRINCIPAL (Single Page Application - SPA)
+     Archivo: index.html
+     
+     Documento raíz servido por Vite. Define la estructura básica del DOM, 
+     las etiquetas meta de renderizado móvil, la identidad visual (favicon) 
+     y el contenedor de montaje donde React inyecta el Virtual DOM.
+     =========================================================================== -->
+<!doctype html>
+<html lang="es" class="scroll-smooth">
   <head>
+    <!-- 1. Metadatos de Codificación y Compatibilidad -->
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- 2. Configuración de Viewport Responsivo para Dispositivos Móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>NorthCode</title>
+
+    <!-- 3. Identidad de Marca y Favicon Vectorial -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- 4. Título de la Pestaña del Navegador -->
+    <title>NorthCode — Transformamos ideas en experiencias digitales</title>
   </head>
-  <body>
+
+  <body class="bg-black text-white antialiased selection:bg-red-600 selection:text-white">
+    <!-- =======================================================================
+         CONTENEDOR RAIZ DEL VIRTUAL DOM (#root)
+         React inyecta toda la aplicación dinámica dentro de este nodo.
+         ======================================================================= -->
     <div id="root"></div>
+
+    <!-- =======================================================================
+         CARGADOR DE MODULOS ECMASCRIPT (ESM)
+         Vite intercepta esta etiqueta para proveer Hot Module Replacement (HMR).
+         ======================================================================= -->
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
